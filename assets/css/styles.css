@@ -590,3 +590,25 @@ strong {
     /* Nota: Aquí irían otros estilos como background-color, border-radius, font-size, etc. */
 }
 
+/* AJUSTE DE COOKIEBOT (sin cambios) */
+    #CookiebotWidget,
+    #CookiebotWidget div[data-focus-lock-disabled="false"],
+    .CookiebotWidget {
+        max-width: 95vw !important;
+        width: 95vw !important;
+        margin: 0 auto !important;
+        left: 2.5vw !important;
+        right: 2.5vw !important;
+        bottom: 10px !important;
+        top: auto !important;
+    }
+    #CookiebotWidget * {
+        font-size: 13px !important;
+    }
+    .CybotCookiebotDialog {
+        padding: 15px !important;
+    }
+    .CybotCookiebotDialogBodyButtons {
+        flex-direction: column;
+        gap: 10px;
+    }
