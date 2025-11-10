@@ -1,3 +1,5 @@
+//IMPLEMENTACIÓN DE COOKIES
+
 document.addEventListener('DOMContentLoaded', function() {
     const banner = document.getElementById('cookie-banner');
     const acceptButton = document.getElementById('accept-cookies');
