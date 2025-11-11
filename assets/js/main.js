@@ -102,3 +102,59 @@ document.addEventListener('DOMContentLoaded', function() {
         handleConsent('rejected');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburger && navLinks) {
+        // Función para alternar el menú
+        const toggleMenu = () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            // Opcional: Deshabilita el scroll del body cuando el menú está abierto
+            document.body.classList.toggle('no-scroll', navLinks.classList.contains('active'));
+        };
+
+        // 1. Abre/Cierra el menú al hacer clic en el icono hamburguesa
+        hamburger.addEventListener('click', toggleMenu);
+
+        // 2. Cierra el menú cuando se hace clic en un enlace (navegación interna)
+        const menuLinks = navLinks.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu(); // Cierra el menú al hacer clic en el enlace
+                }
+            });
+        });
+    }
+
+    // Opcional: Script para el Banner de Cookies si aún no lo tienes
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptButton = document.getElementById('accept-cookies');
+    const rejectButton = document.getElementById('reject-cookies');
+
+    if (cookieBanner) {
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieBanner.style.display = 'block';
+        }
+
+        acceptButton.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieBanner.style.display = 'none';
+        });
+
+        rejectButton.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'rejected');
+            cookieBanner.style.display = 'none';
+        });
+    }
+});
+
+// Opcional: CSS para el no-scroll (agrega esto a tu styles.css)
+/*
+.no-scroll {
+    overflow: hidden;
+}
+*/

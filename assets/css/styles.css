@@ -665,3 +665,132 @@ strong {
     background-color: #00bcd4;
     color: white;
 }
+
+/* --- INICIO: ESTILOS PARA MENÚ MÓVIL (HAMBURGUESA) --- */
+
+/* Estilo del botón hamburguesa */
+.hamburger {
+    /* Oculto por defecto, se mostrará en @media (max-width: 768px) */
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Debe estar por encima del menú desplegable */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-secundario); /* Color de las líneas */
+    transition: all 0.3s ease-in-out;
+}
+
+/* El menú desplegable (oculto por defecto en móvil) */
+.nav-links.active {
+    /* Estado activo: se muestra y cubre toda la pantalla */
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Transiciones para la animación del botón hamburguesa */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Media Query para móvil: Se aplican los estilos específicos */
+@media (max-width: 768px) {
+    /* 1. Muestra el botón hamburguesa y ajusta la posición */
+    .hamburger {
+        display: block;
+        position: absolute; 
+        right: 20px;
+    }
+    
+    /* 2. Ajustes al contenedor de navegación en móvil */
+    .nav-container {
+        justify-content: space-between; 
+        padding: 0 10px;
+    }
+    
+    .nav-brand {
+        font-size: 1.3em;
+        margin-right: auto;
+    }
+
+    /* Oculta el CTA de cursos de la barra superior en móvil */
+    .nav-cta-button {
+        display: none;
+    }
+
+    /* 3. Estilo del menú desplegable (CORREGIDO) */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        
+        /* Centrado y ajuste de altura para evitar el efecto "infinito" */
+        justify-content: flex-start;
+        align-items: center; 
+        
+        position: fixed; 
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        
+        /* Ajuste de altura dinámica con límites */
+        height: auto; 
+        min-height: 40vh; 
+        max-height: calc(100vh - 60px); 
+        overflow-y: auto; 
+
+        background-color: var(--color-secundario); 
+        padding: 40px 0;
+        text-align: center;
+        gap: 0;
+        z-index: 999;
+        
+        /* Animación de entrada */
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out, visibility 0s 0.4s;
+    }
+
+    /* Estilos para cada elemento de la lista (el que contiene el enlace) */
+    .nav-links li {
+        width: 80%; /* Ancho para que la línea no sea de borde a borde */
+        margin: 0; 
+        padding: 15px 0;
+        /* LÍNEA DE SEPARACIÓN */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    }
+
+    /* Quitar la línea de separación del último elemento */
+    .nav-links li:last-child {
+        border-bottom: none; 
+    }
+
+    .nav-links a {
+        color: white; 
+        font-size: 1.5em;
+        padding: 0; 
+        display: block;
+        border-bottom: none;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-hotmart); 
+    }
+}
+/* --- FIN: ESTILOS PARA MENÚ MÓVIL (HAMBURGUESA) --- */

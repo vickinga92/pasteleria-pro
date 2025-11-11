@@ -10,17 +10,24 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand" target="_blank">👑 Pastelería PRO</a>
-            <ul class="nav-links">
-                <li><a href="#archivo-guias">Artículos</a></li>
-                <li><a href="todos los cursos.html">Cursos PRO</a></li>
-            </ul>
-            <a href="todos los cursos.html" class="nav-cta-button" target="_blank">
-                🎓 ¡Cursos!
-            </a>
-        </div>
-    </nav>
+    <div class="nav-container">
+        <a href="index.html" class="nav-brand" target="_blank">👑 Pastelería PRO</a>
+
+        <button class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#archivo-guias">Artículos</a></li>
+            <li><a href="todos los cursos.html">Cursos PRO</a></li>
+        </ul>
+        
+        <a href="todos los cursos.html" class="nav-cta-button" target="_blank">
+            🎓 ¡Cursos!
+        </a>
+    </div>
+</nav>
 
     <header class="hero">
         <div class="hero-content">
@@ -171,6 +178,7 @@
     <footer>
         <p>&copy; 2025 Pastelería PRO. Plataforma de Análisis y Formación Profesional.</p>
     </footer>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
