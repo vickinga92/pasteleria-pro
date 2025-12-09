@@ -1,0 +1,34 @@
+name: Generate Sitemap for Pasteleria-Pro
+
+on:
+  push:
+    branches:
+      - main  # cambia si tu rama principal se llama diferente
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # versión estable de Node
+
+      - name: Install sitemap generator
+        run: npm install -g sitemap-generator-cli
+
+      - name: Generate sitemap.xml
+        run: |
+          sitemap-generator https://vickinga92.github.io/pasteleria-pro/ --output ./sitemap.xml --changefreq weekly --priority 0.8 --verbose
+
+      - name: Commit and push sitemap.xml
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "Update sitemap.xml"
+          git push
+        continue-on-error: true
