@@ -794,3 +794,136 @@ strong {
     }
 }
 /* --- FIN: ESTILOS PARA MENÚ MÓVIL (HAMBURGUESA) --- */
+
+/* ============================================== */
+/* ===== BANNER INTEGRADO DESPUÉS DEL HEADER ===== */
+ @font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+  }
+
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+  }
+
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+  }
+
+  #sib-container input:-ms-input-placeholder {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: #c0ccda;
+  }
+
+  #sib-container input::placeholder {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    color: #c0ccda;
+  }
+
+  #sib-container a {
+    text-decoration: underline;
+    color: #2BB2FC;
+  }
+  /* ============================================== */
+  /* --- Estilos para el Banner Horizontal --- */
+
+/* Contenedor principal del banner */
+.sib-banner-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    /* Usé un color de fondo diferente para simular el de la imagen superior */
+    background-color: #e0d0af; /* Color de fondo ligero */ 
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* El contenido que va a estar en línea (texto, input, botón) */
+.banner-content {
+    display: flex; /* Habilita el modo flexbox */
+    align-items: center; /* Centra verticalmente los ítems */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    max-width: 1000px; /* Limita el ancho si es necesario */
+    margin: 0 auto;
+    flex-wrap: nowrap; /* Evita que los ítems se envuelvan en pantallas grandes */
+}
+
+/* Bloque de Texto */
+.sib-form-block-text {
+    margin-right: 15px;
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+}
+
+.sib-form-block-text p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+}
+
+/* Estilo para el texto "Descarga GRATIS el eBook:" */
+.text-free-download {
+    color: #4a4a4a; /* Color de texto normal */
+}
+
+/* Estilo para el título del eBook */
+.text-ebook-title {
+    font-weight: bold;
+    color: #55c061; /* Color verde del texto original */
+}
+
+/* Bloque de Entrada de Email */
+.sib-input-banner {
+    flex-grow: 1; /* Permite que el campo de email tome el espacio restante */
+    max-width: 250px; /* Establece un ancho máximo para que no sea muy largo */
+    margin-right: 15px;
+}
+
+.input-banner {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #c0ccda;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Bloque del Botón */
+.sib-form-block-button {
+    flex-shrink: 0; /* Evita que el botón se encoja */
+}
+
+.sib-form-block__button {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #55c061; /* Color verde para el botón */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1; /* Asegura que el texto del botón esté bien alineado */
+}
+
+/* Manejo de la Responsividad (Opcional, pero recomendado) */
+@media (max-width: 600px) {
+    .banner-content {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: stretch; /* Estira los elementos para ocupar el ancho */
+    }
+
+    .sib-form-block-text, .sib-input-banner, .sib-form-block-button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px; /* Espacio entre los elementos apilados */
+    }
+}
