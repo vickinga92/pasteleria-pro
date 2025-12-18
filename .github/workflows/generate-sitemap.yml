@@ -3,7 +3,11 @@ name: Generate Sitemap for Pasteleria-Pro
 on:
   push:
     branches:
-      - main  # cambia si tu rama principal se llama diferente
+      - main
+
+# ESTO ES VITAL: Permite que el bot escriba en el repo
+permissions:
+  contents: write
 
 jobs:
   generate-sitemap:
@@ -13,9 +17,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '20' # versión estable de Node
+          node-version: '20'
 
       - name: Install sitemap generator
         run: npm install -g sitemap-generator-cli
@@ -24,11 +28,15 @@ jobs:
         run: |
           sitemap-generator https://vickinga92.github.io/pasteleria-pro/ --output ./sitemap.xml --changefreq weekly --priority 0.8 --verbose
 
-      - name: Commit and push sitemap.xml
+      - name: Commit and push sitemap.xml if changed
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
-          git commit -m "Update sitemap.xml"
-          git push
-        continue-on-error: true
+          # El comando diff revisa si hay cambios reales antes de intentar el commit
+          if ! git diff --cached --quiet; then
+            git commit -m "Update sitemap.xml"
+            git push
+          else
+            echo "No changes to commit"
+          fi
