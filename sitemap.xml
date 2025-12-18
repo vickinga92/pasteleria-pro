@@ -1,58 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/blog.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/todos-los-cursos.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/mejor-batidora-de-pie-profesional-2025.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vickinga92.github.io/pasteleria-pro/Accesorios-para-tu-Batidora-KitchenAid.html</loc>
+  </url>
+  <url>
+    <loc>https://vickinga92.github.io/pasteleria-pro/Guia-para-Montar-Negocio-de-Pasteleria-Desde-Casa.html</loc>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/pasteles-de-boda-de-lujo.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vickinga92.github.io/pasteleria-pro/Marketing-reposteria-Redes.html</loc>
+  </url>
+  <url>
+    <loc>https://vickinga92.github.io/pasteleria-pro/Tecnicas-Avanzadas-Decoracion-Fondant-3D.html</loc>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/moldes-de-silicona.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://vickinga92.github.io/pasteleria-pro/Petlicias-Navidenas-recetas-para-perros.html</loc>
+  </url>
+  <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/curso-reposteria-vegana-online.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/curso-disenador-de-pasteles.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://vickinga92.github.io/pasteleria-pro/Impresoras-Comestibles.html</loc>
+  </url>
+  <url>
+    <loc>https://vickinga92.github.io/pasteleria-pro/Master-El-ABC-del-Buttercream.html</loc>
+  </url>
+  <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/plantilla-costos.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/emprende-con-sweet-box.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://vickinga92.github.io/pasteleria-pro/lunch-box.html</loc>
-    <lastmod>2025-12-18T21:08:21+00:00</lastmod>
+    <lastmod>2024-12-18T21:26:19+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 </urlset>
